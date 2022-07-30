@@ -1,3 +1,15 @@
-// set up as environment variable later
+const mongoose = require('mongoose')
 
-const coneectionString = 'mongodb+srv://Lakshit:<password>@nodeexpressprojects.qiinecp.mongodb.net/?retryWrites=true&w=majority'
+// returning promise since mongoose.connect returns promise
+const connectDB = (url)=>{
+    mongoose
+    .connect(url,
+    {
+     useNewUrlParser:true,
+     useCreateIndex:true,
+     useFindAndModify:false,
+     useUnifiedTopology:true        
+    })
+}
+
+module.exports = connectDB
