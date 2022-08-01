@@ -2,8 +2,7 @@ const mongoose = require('mongoose')
 
 // returning promise since mongoose.connect returns promise
 const connectDB = (url)=>{
-    mongoose
-    .connect(url,
+    mongoose.connect(url,
     {
      useNewUrlParser:true,
      useCreateIndex:true,
